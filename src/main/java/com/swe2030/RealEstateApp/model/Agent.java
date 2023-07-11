@@ -1,11 +1,18 @@
 package com.swe2030.RealEstateApp.model;
 
+import java.util.List;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Agent {
 
     private String name;
+    private String agencyNameString;
     private String contact;
-    private Property property;
+    private List<Property> AgentProperties;
+
+    
 
     public Agent(String name, String contact) {
         this.name = name;
@@ -20,13 +27,20 @@ public class Agent {
         return contact;
     }
 
-    public Property getProperty() {
-        return property;
+   public List<Property> getAgentProperties() {
+        return AgentProperties;
     }
 
-    public void addProperty(Property property) {
-        this.property = property;
+    public void setAgentProperties(List<Property> agentProperties) {
+        AgentProperties = agentProperties;
     }
 
+    public String getAgencyNameString() {
+        return agencyNameString;
+    }
+
+    public void setAgencyNameString(String agencyNameString) {
+        this.agencyNameString = agencyNameString;
+    }
 
 }

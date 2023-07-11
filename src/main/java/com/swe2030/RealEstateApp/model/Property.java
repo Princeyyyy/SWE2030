@@ -1,10 +1,13 @@
 package com.swe2030.RealEstateApp.model;
 
-import com.swe2030.RealEstateApp.model.Appointment;
+//import com.swe2030.RealEstateApp.model.Appointment;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Property{
 
     private String address;

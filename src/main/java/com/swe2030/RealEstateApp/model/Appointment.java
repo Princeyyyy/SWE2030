@@ -1,5 +1,8 @@
 package com.swe2030.RealEstateApp.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 class Appointment {
     private int tenantID;
     private String tenantName;
